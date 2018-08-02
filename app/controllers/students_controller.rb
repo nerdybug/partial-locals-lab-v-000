@@ -22,6 +22,7 @@ class StudentsController < ApplicationController
 
   def index
     @students = Student.find_by(name: params[:user_input])
+    render 'index'
   end
 
   def student_params
