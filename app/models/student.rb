@@ -15,6 +15,6 @@ class Student < ActiveRecord::Base
   has_many :classrooms, through: :classroom_students
 
   def self.search(user_input)
-    @students = self.find_by(name: user_input)
+    self.find_by(name: user_input)
   end
 end
